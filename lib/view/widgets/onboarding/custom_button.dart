@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustumButton extends StatelessWidget {
+  final VoidCallback? onpress;
   const CustumButton({
-    Key? key,
+    Key? key, this.onpress,
   }) : super(key: key);
 
   @override
@@ -16,7 +17,7 @@ class CustumButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(AppColors.primaryColor)),
-        onPressed: () {},
+        onPressed: onpress,
         child: const Text(
           "Continue",
           style: TextStyle(fontSize: 20),

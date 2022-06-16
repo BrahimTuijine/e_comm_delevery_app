@@ -1,11 +1,12 @@
+// ignore_for_file: file_names
 
+import 'package:e_comm_app_delevery/controller/onboarding_controller.dart';
 import 'package:e_comm_app_delevery/core/constants/app_colors.dart';
 import 'package:e_comm_app_delevery/data/data_sourse/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-class MySlider extends StatelessWidget {
+class MySlider extends GetView<OnboardingControllerImp> {
   const MySlider({
     Key? key,
   }) : super(key: key);
@@ -13,6 +14,11 @@ class MySlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      controller: controller.pageController,
+      onPageChanged: ((value) {
+        controller.onPageChange(value);
+        
+      }),
       itemCount: onBordingList.length,
       itemBuilder: (context, i) => Padding(
         padding: EdgeInsets.symmetric(horizontal: Get.width * .1),
@@ -23,8 +29,8 @@ class MySlider extends StatelessWidget {
                   top: Get.width * 0.1, bottom: Get.width * 0.1),
               child: Text(
                 onBordingList[i].title!,
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 20),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
             SizedBox(
