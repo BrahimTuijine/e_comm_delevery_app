@@ -6,7 +6,7 @@ List<OnBordingModel> onBordingList = [
       title: "Choose product",
       image: AppImagesAssets.onbordingImageOne,
       body:
-          "we have a 100K+ products . choose \n your product from our E-\ncommerce shop"),
+          "we have a 100K+ products . choose \n your product from our \nE-commerce shop"),
   OnBordingModel(
       title: "Easy and safe payment",
       image: AppImagesAssets.onbordingImageTwo,

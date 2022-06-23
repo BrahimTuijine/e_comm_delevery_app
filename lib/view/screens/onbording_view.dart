@@ -21,7 +21,7 @@ class OnbordingView extends GetView<OnboardingControllerImp> {
         Expanded(
           child: Column(
             children: <Widget>[
-              MyStepper(),
+              const MyStepper(),
               CustumButton(onpress: () {
                 controller.next();
               }),

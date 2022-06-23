@@ -1,3 +1,4 @@
+import 'package:e_comm_app_delevery/core/constants/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +14,9 @@ class OnboardingControllerImp extends OnboardingController {
   next() {
     pageController.nextPage(
         duration: const Duration(milliseconds: 500), curve: Curves.easeOut);
+    if (currentIndex.value == 3) {
+      Get.offAllNamed(AppRoute.login);
+    }
   }
 
   @override

@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:e_comm_app_delevery/controller/onboarding_controller.dart';
-import 'package:e_comm_app_delevery/core/constants/app_colors.dart';
 import 'package:e_comm_app_delevery/data/data_sourse/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +16,6 @@ class MySlider extends GetView<OnboardingControllerImp> {
       controller: controller.pageController,
       onPageChanged: ((value) {
         controller.onPageChange(value);
-        
       }),
       itemCount: onBordingList.length,
       itemBuilder: (context, i) => Padding(
@@ -29,8 +27,7 @@ class MySlider extends GetView<OnboardingControllerImp> {
                   top: Get.width * 0.1, bottom: Get.width * 0.1),
               child: Text(
                 onBordingList[i].title!,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: Theme.of(context).textTheme.headline1,
               ),
             ),
             SizedBox(
@@ -46,12 +43,9 @@ class MySlider extends GetView<OnboardingControllerImp> {
             Container(
               width: double.infinity,
               alignment: Alignment.center,
-              child: Text(
-                onBordingList[i].body!,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                    height: 2, fontSize: 20, color: AppColors.grey),
-              ),
+              child: Text(onBordingList[i].body!,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyText1),
             ),
           ],
         ),
