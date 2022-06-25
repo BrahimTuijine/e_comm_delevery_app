@@ -1,4 +1,3 @@
-import 'package:e_comm_app_delevery/core/constants/routes_name.dart';
 import 'package:e_comm_app_delevery/core/localization/change_local.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

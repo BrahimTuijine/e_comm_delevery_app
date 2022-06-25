@@ -1,6 +1,4 @@
-import 'package:e_comm_app_delevery/core/constants/routes_name.dart';
 import 'package:e_comm_app_delevery/core/services/services.dart';
-import 'package:e_comm_app_delevery/view/screens/onbording_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

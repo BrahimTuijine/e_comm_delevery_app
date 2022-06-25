@@ -18,6 +18,7 @@ class OnboardingControllerImp extends OnboardingController {
       Get.offAllNamed(AppRoute.login);
     }
   }
+  
 
   @override
   onPageChange(int index) {

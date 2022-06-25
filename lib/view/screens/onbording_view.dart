@@ -10,7 +10,9 @@ class OnbordingView extends GetView<OnboardingControllerImp> {
   const OnbordingView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Get.put(OnboardingControllerImp());
+    // Get.put(OnboardingControllerImp());
+    Get.lazyPut<OnboardingControllerImp>(() => OnboardingControllerImp(),
+        fenix: true);
     return Scaffold(
         body: Column(
       children: <Widget>[
